@@ -1,1 +1,2 @@
-# simple_etl_project
+# Simple ETL Project For Beginners Like Me
+
