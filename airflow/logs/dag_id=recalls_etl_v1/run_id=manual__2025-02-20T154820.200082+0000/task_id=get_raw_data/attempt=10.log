@@ -1,0 +1,30 @@
+[2025-02-20T17:19:10.221+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-02-20T17:19:10.239+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: recalls_etl_v1.get_raw_data manual__2025-02-20T15:48:20.200082+00:00 [queued]>
+[2025-02-20T17:19:10.247+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: recalls_etl_v1.get_raw_data manual__2025-02-20T15:48:20.200082+00:00 [queued]>
+[2025-02-20T17:19:10.248+0000] {taskinstance.py:2867} INFO - Starting attempt 10 of 10
+[2025-02-20T17:19:10.413+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): get_raw_data> on 2025-02-20 15:48:20.200082+00:00
+[2025-02-20T17:19:10.423+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=286) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-02-20T17:19:10.425+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'recalls_etl_v1', 'get_raw_data', 'manual__2025-02-20T15:48:20.200082+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/recalls_etl_v1.py', '--cfg-path', '/tmp/tmp3guzzcj_']
+[2025-02-20T17:19:10.426+0000] {standard_task_runner.py:105} INFO - Job 20: Subtask get_raw_data
+[2025-02-20T17:19:10.426+0000] {standard_task_runner.py:72} INFO - Started process 288 to run task
+[2025-02-20T17:19:10.477+0000] {task_command.py:467} INFO - Running <TaskInstance: recalls_etl_v1.get_raw_data manual__2025-02-20T15:48:20.200082+00:00 [running]> on host a50f66475725
+[2025-02-20T17:19:10.555+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='recalls_etl_v1' AIRFLOW_CTX_TASK_ID='get_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2025-02-20T15:48:20.200082+00:00' AIRFLOW_CTX_TRY_NUMBER='10' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-02-20T15:48:20.200082+00:00'
+[2025-02-20T17:19:10.557+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-02-20T17:19:10.557+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-02-20T17:19:10.558+0000] {logging_mixin.py:190} INFO - Current task name:get_raw_data state:running start_date:2025-02-20 17:19:10.240831+00:00
+[2025-02-20T17:19:10.558+0000] {logging_mixin.py:190} INFO - Dag name:recalls_etl_v1 and current dag run status:running
+[2025-02-20T17:19:10.559+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-02-20T17:19:14.205+0000] {logging_mixin.py:190} INFO - <Response [200]>
+[2025-02-20T17:19:14.227+0000] {logging_mixin.py:190} INFO - Added 31655 recalled records.
+[2025-02-20T17:19:14.417+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-02-20T17:19:14.428+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-02-20T17:19:14.428+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=recalls_etl_v1, task_id=get_raw_data, run_id=manual__2025-02-20T15:48:20.200082+00:00, execution_date=20250220T154820, start_date=20250220T171910, end_date=20250220T171914
+[2025-02-20T17:19:14.461+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-02-20T17:19:14.461+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-02-20T17:19:14.462+0000] {logging_mixin.py:190} INFO - Dag name:recalls_etl_v1 queued_at:2025-02-20 17:19:08.176669+00:00
+[2025-02-20T17:19:14.462+0000] {logging_mixin.py:190} INFO - Task hostname:a50f66475725 operator:PythonOperator
+[2025-02-20T17:19:14.495+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-02-20T17:19:14.525+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-02-20T17:19:14.528+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
